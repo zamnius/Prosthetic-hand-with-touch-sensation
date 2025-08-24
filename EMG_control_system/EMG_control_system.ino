@@ -13,7 +13,7 @@
   depending on the EMG values.
  */
 
-  // loading the servo libruary
+  // loading the servo library
 #include <Servo.h>
 Servo myServo2;
 Servo myServo3;
