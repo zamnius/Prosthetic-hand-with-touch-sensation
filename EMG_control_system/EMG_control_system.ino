@@ -47,9 +47,28 @@ void loop() {
   // is then compared with pre-set threshold:
   
 
-  if ( sensorValue0 > 250) {myServo2.write(180);myServo3.write(180);myServo4.write(180);myServo5.write(180);myServo6.write(180);myServo7.write(90);}
-  else if ( sensorValue0 > 150){myServo2.write(90);myServo3.write(90);myServo4.write(90);myServo5.write(90);myServo6.write(90);myServo7.write(90);}
-  else if ( sensorValue0 < 150){myServo2.write(0);myServo3.write(0);myServo4.write(0);myServo5.write(0);myServo6.write(0);myServo7.write(0);}
+  if (sensorValue0 >= 250) {
+    myServo2.write(180);
+    myServo3.write(180);
+    myServo4.write(180);
+    myServo5.write(180);
+    myServo6.write(180);
+    myServo7.write(90);
+  } else if (sensorValue0 >= 150) {
+    myServo2.write(90);
+    myServo3.write(90);
+    myServo4.write(90);
+    myServo5.write(90);
+    myServo6.write(90);
+    myServo7.write(90);
+  } else {
+    myServo2.write(0);
+    myServo3.write(0);
+    myServo4.write(0);
+    myServo5.write(0);
+    myServo6.write(0);
+    myServo7.write(0);
+  }
 
   // print out the FSR values of EMG sensor:
   
